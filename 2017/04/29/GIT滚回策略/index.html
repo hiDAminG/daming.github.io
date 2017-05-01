@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/29/GIT滚回策略/index.html">
 <meta property="og:site_name" content="DAminG">
 <meta property="og:description" content="为什么要剿BUG！你们想想，你们带着老婆，坐着火车，吃着火锅，唱着唱歌。突然就让BUG给劫了！所以BUG是必须要剿的！！">
-<meta property="og:updated_time" content="2017-05-01T13:58:34.000Z">
+<meta property="og:updated_time" content="2017-05-01T15:08:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GIT滚回策略">
 <meta name="twitter:description" content="为什么要剿BUG！你们想想，你们带着老婆，坐着火车，吃着火锅，唱着唱歌。突然就让BUG给劫了！所以BUG是必须要剿的！！">
@@ -274,13 +274,16 @@
 <p>将之贮藏的修改还原到那个分支版本中去；<code>git stash</code>还有好多用法，有兴趣的可以自己找一找；</p>
 <hr>
 <p>好了现在让我们捋一捋，当我们带着老婆，坐着火车，吃着火锅，唱着唱歌。突然就让BUG给劫了的时候就应该：</p>
+<blockquote>
+<p>注：如果在开发中启用了其他分支，应利用 <code>git checkout</code>进行分支切换 切换到自己需要的分支。</p>
+</blockquote>
 <h5 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h5><p>掏出我们的<del>过于逼真</del>火速备份：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git stash</div></pre></td></tr></table></figure></p>
 <p>把火锅给收好了；</p>
-<h5 id="其次"><a href="#其次" class="headerlink" title="其次"></a>其次</h5><p>迅捷的切换到了<del>花季护航</del>状态：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout master</div></pre></td></tr></table></figure></p>
+<h5 id="其次-·-仅在有开发分支时"><a href="#其次-·-仅在有开发分支时" class="headerlink" title="其次  · 仅在有开发分支时"></a>其次  · 仅在有开发分支时</h5><p>迅捷的切换到了<del>花季护航</del>状态：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout master</div></pre></td></tr></table></figure></p>
 <p>来到转战场。</p>
 <h5 id="接着"><a href="#接着" class="headerlink" title="接着"></a>接着</h5><p>对BUG尽情的<del>此处省略1000个字</del><br>干完别忘了亲切友好的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit am &quot;保存革命果实&quot;</div></pre></td></tr></table></figure></p>
 <p>忘了<code>commit</code>可就白干了！！</p>
-<h5 id="然后"><a href="#然后" class="headerlink" title="然后"></a>然后</h5><p>云淡风轻的<del>心中默社会主义念核心价值观</del><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout developer</div></pre></td></tr></table></figure></p>
+<h5 id="然后-·-仅在有开发分支时"><a href="#然后-·-仅在有开发分支时" class="headerlink" title="然后 · 仅在有开发分支时"></a>然后 · 仅在有开发分支时</h5><p>云淡风轻的<del>心中默社会主义念核心价值观</del><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout developer</div></pre></td></tr></table></figure></p>
 <p>班师回朝~~</p>
 <h5 id="收尾"><a href="#收尾" class="headerlink" title="收尾"></a>收尾</h5><p>又可以过上吃着火锅唱着歌的日子了~~<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git stash pop</div></pre></td></tr></table></figure></p>
 <p>大森林又回到了往日的平静~~</p>
@@ -298,7 +301,7 @@
         <p><span>本文标题:</span><a href="/2017/04/29/GIT滚回策略/">GIT滚回策略</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 DAminG 的个人博客">DAminG</a></p>
         <!-- <p><span>发布时间:</span>2017年04月29日 - 21时47分</p> -->
-        <!-- <p><span>最后更新:</span>2017年05月01日 - 21时58分</p> -->
+        <!-- <p><span>最后更新:</span>2017年05月01日 - 23时08分</p> -->
         
          
         <p>
@@ -323,7 +326,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#首先"><span class="toc-number">1.</span> <span class="toc-text">首先</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#其次"><span class="toc-number">2.</span> <span class="toc-text">其次</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#接着"><span class="toc-number">3.</span> <span class="toc-text">接着</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#然后"><span class="toc-number">4.</span> <span class="toc-text">然后</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#收尾"><span class="toc-number">5.</span> <span class="toc-text">收尾</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#首先"><span class="toc-number">1.</span> <span class="toc-text">首先</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#其次-·-仅在有开发分支时"><span class="toc-number">2.</span> <span class="toc-text">其次  · 仅在有开发分支时</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#接着"><span class="toc-number">3.</span> <span class="toc-text">接着</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#然后-·-仅在有开发分支时"><span class="toc-number">4.</span> <span class="toc-text">然后 · 仅在有开发分支时</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#收尾"><span class="toc-number">5.</span> <span class="toc-text">收尾</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
